@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9970A6F3-534D-4694-841E-CBD983ED118E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VehicleLimitExpander</RootNamespace>
+    <AssemblyName>VehicleLimitExpander</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>False</ConsolePause>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="Custom" name="Copy To Game" command="xcopy /Y &quot;bin\Debug\${ProjectName}.dll&quot; &quot;C:\Users\Leandro\AppData\Local\Colossal Order\Cities_Skylines\Addons\Mods\VehicleUnlimiter\&quot;" workingdir="${ProjectDir}" externalConsole="True" />
+      </CustomCommands>
+    </CustomCommands>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>False</ConsolePause>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>J:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>J:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="ColossalManaged">
+      <HintPath>J:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\ColossalManaged.dll</HintPath>
+    </Reference>
+    <Reference Include="ICities">
+      <HintPath>J:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\ICities.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>J:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mod.cs" />
+    <Compile Include="RedirectionHelper.cs" />
+    <Compile Include="Attributes\FixmeAttribute.cs" />
+    <Compile Include="Attributes\ReplaceMethodAttribute.cs" />
+    <Compile Include="Fakes\FakeBuilding.cs" />
+    <Compile Include="Fakes\FakeCommonBuildingAI.cs" />
+    <Compile Include="Fakes\FakeDepotAI.cs" />
+    <Compile Include="Fakes\FakeVehicle.cs" />
+    <Compile Include="Fakes\FakeVehicleManager.cs" />
+    <Compile Include="Fakes\FakeTaxiStandAI.cs" />
+    <Compile Include="Fakes\FakeTransportStationAI.cs" />
+    <Compile Include="Fakes\FakeCitizenAI.cs" />
+    <Compile Include="Fakes\FakeResidentAI.cs" />
+    <Compile Include="Fakes\FakeTouristAI.cs" />
+    <Compile Include="Fakes\FakeTransportLine.cs" />
+    <Compile Include="Fakes\FakeCarAI.cs" />
+    <Compile Include="Fakes\FakeCargoShipAI.cs" />
+    <Compile Include="Fakes\FakeCargoTrainAI.cs" />
+    <Compile Include="Fakes\FakeCargoTruckAI.cs" />
+    <Compile Include="Fakes\FakePassengerTrainAI.cs" />
+    <Compile Include="Fakes\FakeShipAI.cs" />
+    <Compile Include="Fakes\FakeTrainAI.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Attributes\" />
+    <Folder Include="Fakes\" />
+  </ItemGroup>
+</Project>

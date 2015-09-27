@@ -1,0 +1,20 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="VehicleLimitExpander\Mod.cs" Line="205" Column="1" />
+      <File FileName="VehicleLimitExpander\RedirectionHelper.cs" Line="25" Column="27" />
+      <File FileName="VehicleLimitExpander\Attributes\FixmeAttribute.cs" Line="3" Column="26" />
+      <File FileName="VehicleLimitExpander\Attributes\ReplaceMethodAttribute.cs" Line="3" Column="11" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
