@@ -12,7 +12,7 @@ namespace Klyte.Unlimiter.Fake
 
 		public override void GetBufferStatus (ushort vehicleID, ref Vehicle data, out string localeKey, out int current, out int max)
 		{
-			localeKey = "Default";
+			localeKey = "Par défaut";
 			current = 0;
 			max = this.m_cargoCapacity;
 			VehicleManager instance = Singleton<VehicleManager>.instance;
@@ -22,7 +22,7 @@ namespace Klyte.Unlimiter.Fake
 				current++;
 				num = instance.m_vehicles.m_buffer [(int)num].m_nextCargo;
 				if (++num2 > 65536) {
-					CODebugBase<LogChannel>.Error (LogChannel.Core, "Invalid list detected!\n" + Environment.StackTrace);
+					CODebugBase<LogChannel>.Error (LogChannel.Core, "List invalid détectée !\n" + Environment.StackTrace);
 					break;
 				}
 			}
@@ -46,7 +46,7 @@ namespace Klyte.Unlimiter.Fake
 				num = nextCargo;
 				if (++num2 > 65536)
 				{
-					CODebugBase<LogChannel>.Error (LogChannel.Core, "Invalid list detected!\n" + Environment.StackTrace);
+					CODebugBase<LogChannel>.Error (LogChannel.Core, "List invalide détectée !\n" + Environment.StackTrace);
 					break;
 				}
 			}
@@ -75,7 +75,7 @@ namespace Klyte.Unlimiter.Fake
 				num = nextCargo;
 				if (++num2 > 65536)
 				{
-					CODebugBase<LogChannel>.Error (LogChannel.Core, "Invalid list detected!\n" + Environment.StackTrace);
+					CODebugBase<LogChannel>.Error (LogChannel.Core, "Liste invalide détectée !\n" + Environment.StackTrace);
 					break;
 				}
 			}
