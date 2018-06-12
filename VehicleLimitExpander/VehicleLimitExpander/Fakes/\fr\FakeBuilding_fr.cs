@@ -35,11 +35,11 @@ public class FakeBuilding
 			num2 = instance.m_vehicles.m_buffer [(int)num2].m_nextGuestVehicle;
 			if (++num3 > 65536)
 			{
-				CODebugBase<LogChannel>.Error (LogChannel.Core, "Invalid list detected!\n" + Environment.StackTrace);
+				CODebugBase<LogChannel>.Error (LogChannel.Core, "Liste invalide détectée !\n" + Environment.StackTrace);
 				break;
 			}
 		}
-		CODebugBase<LogChannel>.Error (LogChannel.Core, "Vehicle not found!\n" + Environment.StackTrace);
+		CODebugBase<LogChannel>.Error (LogChannel.Core, "Véhicule introuvable !\n" + Environment.StackTrace);
 	}
 	
 	public void RemoveOwnVehicle (ushort vehicleID, ref Vehicle data)
@@ -67,11 +67,11 @@ public class FakeBuilding
 			num2 = instance.m_vehicles.m_buffer [(int)num2].m_nextOwnVehicle;
 			if (++num3 > 65536)
 			{
-				CODebugBase<LogChannel>.Error (LogChannel.Core, "Invalid list detected!\n" + Environment.StackTrace);
+				CODebugBase<LogChannel>.Error (LogChannel.Core, "Liste invalide détectée !\n" + Environment.StackTrace);
 				break;
 			}
 		}
-		CODebugBase<LogChannel>.Error (LogChannel.Core, "Vehicle not found!\n" + Environment.StackTrace);
+		CODebugBase<LogChannel>.Error (LogChannel.Core, "Véhicule introuvable !\n" + Environment.StackTrace);
 	}
 }
 
