@@ -63,7 +63,7 @@ namespace Klyte.Unlimiter.Fake
 					info.m_vehicleAI.SimulationStep (num, ref instance2.m_vehicles.m_buffer [(int)num], vehicleID, ref data, lodPhysics);
 					num = trailingVehicle;
 					if (++num2 > 65536) {
-						CODebugBase<LogChannel>.Error (LogChannel.Core, "Invalid list detected!\n" + Environment.StackTrace);
+						CODebugBase<LogChannel>.Error (LogChannel.Core, "Liste invalide détectée !\n" + Environment.StackTrace);
 						break;
 					}
 				}
@@ -97,7 +97,7 @@ namespace Klyte.Unlimiter.Fake
 					while (num5 != 0) {
 						num5 = this.CheckOtherVehicle (vehicleID, ref vehicleData, ref frameData, ref maxSpeed, ref blocked, ref collisionPush, maxBraking, num5, ref instance.m_vehicles.m_buffer [(int)num5], min, max, lodPhysics);
 						if (++num6 > 65536) {
-							CODebugBase<LogChannel>.Error (LogChannel.Core, "Invalid list detected!\n" + Environment.StackTrace);
+							CODebugBase<LogChannel>.Error (LogChannel.Core, "Liste invalide détectée !\n" + Environment.StackTrace);
 							break;
 						}
 					}
@@ -128,7 +128,7 @@ namespace Klyte.Unlimiter.Fake
 									while (num12 != 0) {
 										num12 = this.CheckCitizen (vehicleID, ref vehicleData, segment, num7, magnitude, ref maxSpeed, ref blocked, maxBraking, num12, ref instance2.m_instances.m_buffer [(int)num12], min, max);
 										if (++num13 > 65536) {
-											CODebugBase<LogChannel>.Error (LogChannel.Core, "Invalid list detected!\n" + Environment.StackTrace);
+											CODebugBase<LogChannel>.Error (LogChannel.Core, "Liste invalide détectée !\n" + Environment.StackTrace);
 											break;
 										}
 									}
@@ -393,7 +393,7 @@ namespace Klyte.Unlimiter.Fake
 					while (num5 != 0) {
 						num5 = CheckOverlap (segment, ignoreVehicle, maxVelocity, num5, ref instance.m_vehicles.m_buffer [(int)num5], ref result);
 						if (++num6 > 65536) {
-							CODebugBase<LogChannel>.Error (LogChannel.Core, "Invalid list detected!\n" + Environment.StackTrace);
+							CODebugBase<LogChannel>.Error (LogChannel.Core, "List invalide détectée !\n" + Environment.StackTrace);
 							break;
 						}
 					}
